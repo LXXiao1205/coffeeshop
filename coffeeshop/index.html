@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="toparea">
+        <div class="container1">
+            <a href="./index.html">
+                <img class="logo_img" src="./src/Logo-Of-BMW.png" alt="">
+            </a>
+        </div>
+        <div class="container2">
+            <a href="./login.html">login</a>
+        </div>
+    </div>
+    <div class="img1">
+        <div class="advertise">
+            <h1>不体验女仆咖啡，就像玩游戏不玩原神</h1>
+        </div>
+    </div>
+    <div class="schedule">
+       <div class="schedule_text">
+        <h2>值班表</h2>
+       </div>
+
+
+       <div id="days">
+        <span class="day day1" data-day="1">星期一</span>
+        <span class="day day2" data-day="2">星期二</span>
+        <span class="day day3" data-day="3">星期三</span>
+        <span class="day day4" data-day="4">星期四</span>
+        <span class="day day5" data-day="5">星期五</span>
+        <span class="day day6" data-day="6">星期六</span>
+        <span class="day day7" data-day="7">星期日</span>
+      </div>
+    </div>
+
+
+    <div class="notice_layer">
+        <div class="notice_text">
+            <span>公告</span>
+        </div>
+        <br>
+
+        <div class="img_layer_1 img_layer">
+            
+        </div>
+        <div class="img_layer_2 img_layer" >
+            <!-- <div class="banner">
+                <img src="./src/banner1.png" alt="">
+                <img src="./src/banner2.png" alt="">
+            </div> -->
+            <div class="lunbo">
+                <div class="content">
+                <ul id="item">
+                    <li class="item">
+                        <a href="#"><img src="./src/banner1.png" ></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><img src="./src/banner2.png" ></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><img src="img/pic3.jpg" ></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><img src="img/pic4.jpg" ></a>
+                    </li>
+                    <li class="item">
+                        <a href="#"><img src="img/pic5.jpg" ></a>
+                    </li>
+                </ul>
+                <div id="btn-left"><</div>
+                <div id="btn-right">></div>
+                <ul id="circle">
+                    
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                    <li class="circle"></li>
+                </ul>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+<script>
+
+// 关于值班表的script部分
+        function getDayOfWeek() {
+    const today = new Date();
+    const dayOfWeek = today.getDay(); 
+    // getDay() 返回的是0（星期日）到6（星期六）的值
+    return dayOfWeek;
+    }
+
+    function highlightCurrentDay() {
+    const daysContainer = document.getElementById('days');
+    const days = daysContainer.getElementsByClassName('day');
+    
+    // 移除所有行内块的激活状态
+    Array.from(days).forEach(day => {
+        day.classList.remove('active');
+    });
+
+    // 根据当前星期几，放大对应的行内块
+    const currentDay = getDayOfWeek();
+    const activeDay = days[currentDay-1];
+    if (activeDay) {
+        activeDay.classList.add('active');
+    }
+    }
+    highlightCurrentDay();
+    // 当页面加载完成后执行
+   
+
+// 轮播图的代码
+window.onload=function(){
+        var items=document.getElementsByClassName("item");
+        var circles=document.getElementsByClassName("circle");
+        var leftBtn=document.getElementById("btn-left");
+        var rightBtn=document.getElementById("btn-right");
+        var content=document.querySelector('.content');
+        var index=0;
+        var timer=null;
+
+        //清除class
+        var clearclass=function(){
+            for(let i=0;i<items.length;i++){
+                items[i].className="item";
+                circles[i].className="circle";
+                circles[i].setAttribute("num",i);
+            }
+        }
+        /*只显示一个class*/
+        function move(){
+            clearclass();
+            items[index].className="item active";
+            circles[index].className="circle white";
+        }
+        //点击右边按钮切换下一张图片
+        rightBtn.onclick=function(){
+            if(index<items.length-1){
+                index++;
+            }
+            else{
+                index=0;
+            }
+            move();
+        }
+        //点击左边按钮切换上一张图片
+        leftBtn.onclick=function(){
+            if(index<items.length){
+                index--;
+            }
+            else{
+                index=items.length-1;
+            }
+            move();
+        }
+        //开始定时器，点击右边按钮，实现轮播
+        timer=setInterval(function(){
+            rightBtn.onclick();
+        },1500)
+        //点击圆点时，跳转到对应图片
+        for(var i=0;i<circles.length;i++){
+            circles[i].addEventListener("click",function(){
+                var point_index=this.getAttribute("num");
+                index=point_index;
+                move();
+            })
+
+        }
+        //鼠标移入清除定时器，并开启一个三秒的定时器，使慢慢转动
+        content.onmouseover=function(){
+            clearInterval(timer);
+                timer=setInterval(function(){
+                    rightBtn.onclick();
+                },3000)
+        }
+        //鼠标移出又开启定时器
+        content.onmouseleave=function(){
+            clearInterval(timer);
+            timer=setInterval(function(){
+                rightBtn.onclick();
+            },1500)
+        }
+        }
+
+       
+</script>
+
+
+</body>
+</html>

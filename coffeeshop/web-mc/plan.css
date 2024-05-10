@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(photos/cloud.jpg) fixed;
+    background-position: center;
+
+}
+
+/* 顶端部分 */
+.toparea {
+    background-color: rgb(33, 32, 32);
+    height: 50px;
+    border-bottom: 10px rgb(186, 85, 23) solid;
+    line-height: 50px;
+    color: antiquewhite;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+
+}
+
+.container1 {
+    padding-left: 30px;
+    display: inline-block;
+    width: 200px;
+}
+
+.container1 a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+
+    color: antiquewhite;
+}
+
+.toparea a:hover {
+    background-color: rgb(95, 12, 69);
+}
+
+.container2 {
+    display: block;
+    width: 200px;
+    float: right;
+    margin-right: 50px;
+
+}
+
+.container2 a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+
+    color: antiquewhite;
+}
+
+/* pro1部分 */
+.pro1 {
+    background: rgba(14, 14, 14, 0.841);
+    width: 1200px;
+    height: 310px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    margin: 150px auto;
+    color: white;
+}
+
+.pro1 img {
+    float: left;
+    margin: 15px 15px;
+    border: 5px solid rgb(186, 85, 23);
+}
+
+.pro1 div {
+    display: block;
+    float: left;
+    height: 200px;
+    width: 500px;
+    margin-top: 50px;
+    margin-left: 50px;
+
+}
+
+.pro1 button {
+    display: block;
+    float: left;
+    width: 50px;
+    height: 200px;
+    position: relative;
+    top: 55px;
+    background-color: indianred;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: x-large;
+    z-index: 1;
+
+
+}

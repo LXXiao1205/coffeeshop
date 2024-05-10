@@ -1,0 +1,302 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 开始添加最顶层栏目的样式，命名为toparea，其中包含了两个小区块，container1和container2，分别对应与logo，点击返回主页，和登录，点击进入登录页面 */
+
+.toparea {
+    background-color: rgb(33, 32, 32);
+    height: 50px;
+    border-bottom: 10px rgb(186, 85, 23) solid;
+    line-height: 50px;
+    color: antiquewhite;
+    width: 100%;
+
+}
+
+.logo_img {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+
+.container1 {
+    padding-left: 30px;
+    display: inline-block;
+    width: 200px;
+}
+
+.container1 a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+
+    color: antiquewhite;
+}
+
+.toparea a:hover {
+    background-color: rgb(95, 12, 69);
+}
+
+.container2 {
+    width: 200px;
+    float: right;
+    margin-right: 50px;
+
+}
+
+.container2 a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+
+    color: antiquewhite;
+}
+
+/* 设置大海报，区块的高度和图片高度一致，宽度和浏览器宽度一致 */
+
+.img1 {
+    text-align: center;
+    height: 720px;
+    background: url(./src/91d37925519609a105fc0b9ee300ac7.jpg) no-repeat;
+    background-size: 100% 100%;
+    border-bottom: 10px rgb(186, 85, 23) solid;
+
+}
+
+.advertise {
+    padding-top: 50px;
+}
+
+/* 设置值班表轮播图 */
+
+.schedule {
+    
+    box-sizing: border-box;
+    height: 800px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 10px gray solid; 
+    /* border-left: 5px purple solid;
+    border-right: 5px purple solid;/*
+   
+    /* background-color: aqua; */
+}
+
+.schedule_text{
+    height: 100px;
+    text-align: center;
+}
+
+.schedule_text h2 {
+    display: inline-block;
+    height: 100px;
+    vertical-align: middle;
+    line-height: 100px;
+
+}
+
+
+
+/* 设置值班表中，周一到周日7天的样式,设计为横向的竖条分布，当天值班的区块会有凸显的效果 */
+
+
+
+#days {
+    
+    text-align: center;
+  }
+  
+  .day {
+    display: inline-block;
+    height: 300px;
+    width: 200px;
+    margin-top: 150px;
+  }
+
+.day1 {
+    
+    background: url(./src/employee.png) no-repeat ;
+   
+}
+.day2 {
+    
+    background: url(./src/employee.png) no-repeat ;
+   
+}
+.day3 {
+    
+    background: url(./src/employee.png) no-repeat ;
+    
+}
+.day4 {
+    
+    background: url(./src/employee.png) no-repeat ;
+    
+}
+.day5 {
+    
+    background: url(./src/employee.png) no-repeat ;
+    
+}
+.day6 {
+    
+    background: url(./src/employee.png) no-repeat ;
+    
+}
+.day7 {
+    
+    background: url(./src/employee.png) no-repeat ;
+    
+}
+ 
+  .day.active {
+    transform: scale(1.5); /* 放大到1.5倍 */
+  }
+
+
+  /* 设定公告区块的样式 */
+  .notice_layer {
+    height: 1200px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .notice_text {
+    text-align: left;
+    display: inline-block;
+    width: 1000px;
+    height: 100px;
+    font-size: 50px;
+    margin-top: 80px;
+  }
+
+  .img_layer{
+    display: inline-block;
+    background-color: gray;
+    height: 300px;
+
+  }
+
+  .img_layer_1 {
+    width: 200px;
+  }
+
+  .img_layer_2 {
+    width: 800px;
+    overflow: hidden;
+    display: inline-flex;
+    animation: run 10s ease infinite;
+  }
+
+  .banner {
+    width: 100%;
+    height: 100%;
+    
+    
+  }
+
+  .banner img{
+    display: inline-block;
+  }
+
+
+ 
+/* 轮播图样式 */
+a{
+	list-style: none;
+}
+li{
+	list-style: none;
+}
+.lunbo{
+	width: 100%;
+}
+.content{
+	width: 800px;
+	height: 300px;
+	
+	position: relative;
+}
+#item{
+	width: 100%;
+	height: 100%;
+	
+}
+.item{
+	position: absolute;
+	opacity: 0;
+	transition: all 1s;
+	
+}
+.item.active{
+	opacity:1;
+}
+img{
+	width: 100%;
+}
+#btn-left{
+	width: 30px;
+	height: 69px;
+	font-size: 30px;
+	color: white;
+	background-color:rgba(0,0,0,0.4);
+	line-height: 69px;
+	padding-left:5px;
+	z-index: 10;/*始终显示在图片的上层*/
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-60%);/*使按钮向上偏移居中对齐*/
+	cursor: pointer;
+	opacity: 0;/*平时隐藏*/
+}
+.lunbo:hover #btn-left{
+	/*鼠标滑入，显示图标*/
+	opacity: 1;
+}
+
+#btn-right{
+	width: 26px;
+	height: 69px;
+	font-size: 30px;
+	color: white;
+	background-color:rgba(0,0,0,0.4);
+	line-height: 69px;
+	padding-left: 5px;
+	z-index: 10;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	cursor: pointer;
+	opacity: 0;
+	transform: translateY(-60%);
+}
+.lunbo:hover #btn-right{
+	opacity: 1;
+}
+#circle{
+	height: 20px;
+	display: flex;
+	position: absolute;
+	bottom: 35px;
+	right: 25px;
+}
+.circle{
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	border: 2px solid white;
+	background: rgba(0,0,0,0.4);
+	cursor: pointer;
+	margin: 5px;
+}
+.white{
+	background-color: #FFFFFF;
+}

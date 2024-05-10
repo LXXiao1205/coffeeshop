@@ -1,0 +1,134 @@
+.toparea {
+    background-color: rgb(33, 32, 32);
+    height: 50px;
+    border-bottom: 10px rgb(186, 85, 23) solid;
+    line-height: 50px;
+    color: antiquewhite;
+    width: 100%;
+    position: fixed;
+    top: 0;
+
+}
+
+.logo_img {
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.container1 {
+    padding-left: 30px;
+    display: inline-block;
+    width: 200px;
+}
+
+.container1 a {
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+
+    color: antiquewhite;
+}
+
+.toparea a:hover {
+    background-color: rgb(95, 12, 69);
+}
+
+.container2 {
+    width: 200px;
+    float: right;
+    margin-right: 50px;
+
+}
+
+.container2 a {
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    width: 100%;
+    border-radius: 20px;
+
+    color: antiquewhite;
+}
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: url(../img/bg.jpg)  no-repeat center 0px;
+	background-size: cover;
+ 
+	
+ 
+     background-position: center 0; 
+     background-repeat: no-repeat;  
+     background-attachment: fixed; 
+      -webkit-background-size: cover;  
+      -o-background-size: cover;  
+      -moz-background-size: cover;  
+      -ms-background-size: cover;
+	
+}
+.login-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	padding:40px;
+	background: rgb(186, 85, 23)  no-repeat center 0px;
+	box-sizing: border-box;
+	box-shadow: 0 15px  25px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+.login-box h2{
+	margin: 0 0 30px;
+	padding: 0;
+	text-align: center;
+	color: #fff;
+}
+.login-box .login-field{
+	position: relative;
+}
+.login-box .login-field  input{
+	width: 100%;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 30px;
+	border: none;
+	border-bottom: 1px solid #fff;
+	outline: none;
+	background: transparent;
+}
+.login-box .login-field  label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	letter-spacing: 1px;
+	padding: 10px 0;
+	font-size: 16px;
+	color: #fff;
+	pointer-events: none;
+	transition: .5s;
+}
+.login-box .login-field input:focus ~ label,
+.login-box .login-field input:valid ~ label{
+	top: -23px;
+	left: 0;
+	color: aqua;
+	font-size: 12px;
+}
+.login-box button{
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #fff;
+	background: #03a9f4;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+}
