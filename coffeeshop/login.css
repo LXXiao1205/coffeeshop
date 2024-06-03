@@ -1,3 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+	font-family: sans-serif;
+	background: url(./src/deer.jpg)  no-repeat center fixed;
+	background-size: cover;
+ 
+	
+ 
+     background-position: center 0; 
+     background-repeat: no-repeat;  
+     background-attachment: fixed; 
+      -webkit-background-size: cover;  
+      -o-background-size: cover;  
+      -moz-background-size: cover;  
+      -ms-background-size: cover;
+	
+}
+
+
 .toparea {
     background-color: rgb(33, 32, 32);
     height: 50px;
@@ -54,24 +79,7 @@
 }
 
 
-body{
-	margin: 0;
-	padding: 0;
-	font-family: sans-serif;
-	background: url(../img/bg.jpg)  no-repeat center 0px;
-	background-size: cover;
- 
-	
- 
-     background-position: center 0; 
-     background-repeat: no-repeat;  
-     background-attachment: fixed; 
-      -webkit-background-size: cover;  
-      -o-background-size: cover;  
-      -moz-background-size: cover;  
-      -ms-background-size: cover;
-	
-}
+
 .login-box{
 	position: absolute;
 	top: 50%;

@@ -4,8 +4,15 @@
 }
 
 /* 开始添加最顶层栏目的样式，命名为toparea，其中包含了两个小区块，container1和container2，分别对应与logo，点击返回主页，和登录，点击进入登录页面 */
+body {
+    width: 100%;
+    background: url(./src/deer.jpg) no-repeat fixed;
+    background-position: center;
+    background-size: 100% 100%;
+}
 
 .toparea {
+  margin: 0 auto;
     background-color: rgb(33, 32, 32);
     height: 50px;
     border-bottom: 10px rgb(186, 85, 23) solid;
@@ -61,46 +68,137 @@
 
 /* 设置大海报，区块的高度和图片高度一致，宽度和浏览器宽度一致 */
 
+.haibao {
+  text-align: center;
+  border-bottom: 10px rgb(186, 85, 23) solid;
+}
+
 .img1 {
-    text-align: center;
-    height: 720px;
-    background: url(./src/91d37925519609a105fc0b9ee300ac7.jpg) no-repeat;
-    background-size: 100% 100%;
-    border-bottom: 10px rgb(186, 85, 23) solid;
+   width: 100%;
+    display: inline-block;
+    height: 700px;
+   
+    box-shadow: 0px 50px 30px 30px rgba(1, 23, 87, 0.851);
 
 }
 
 .advertise {
-    padding-top: 50px;
+    margin-top: 100px;
+    display: inline-block;
+    background: url(./src/haibao.png) no-repeat center;
+    height: 500px;
+    width: 889px;
+    box-shadow: 0px 0px 30px 40px rgba(3, 120, 120, 0.553);
+    border-radius: 5%;
+   
+    
 }
 
-/* 设置值班表轮播图 */
+.advertise h1{
+  display: inline-block;
+  margin-top: 50px;
+}
+
+
+/* 设置导航栏部分样式 */
+
+.daohanglan{
+  margin-top: 100px;
+  height: 150px;
+  text-align: center;
+  line-height: 100px;
+  color: white;
+}
+
+.yuyue {
+  
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  background-color: rgb(4, 121, 35);
+  margin-top: 30px;
+  margin-right: 50px; 
+  margin-left: 50px;
+  border-radius: 10%;
+  box-shadow: 3px 3px 5px 5px rgb(45, 45, 45);
+  border: 5px rgba(5, 179, 52, 0.673) solid ;
+}
+
+.jiameng {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  background-color: rgb(4, 121, 35);
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 10%;
+  box-shadow: 3px 3px 5px 5px rgb(71, 71, 71);
+  border: 5px rgba(5, 179, 52, 0.673) solid ;
+  
+}
+
+.huiyuan {
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  background-color: rgb(4, 121, 35);
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 10%;
+  box-shadow: 3px 3px 5px 5px rgb(71, 71, 71);
+  border: 5px rgba(5, 179, 52, 0.673) solid ;
+  
+}
+.jifen{
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+  background-color: rgb(4, 121, 35);
+  margin-top: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
+  border-radius: 10%;
+  box-shadow: 3px 3px 5px 5px rgb(71, 71, 71);
+  border: 5px rgba(5, 179, 52, 0.673) solid ;
+}
+
+
+
+
+
+
+
+
+/* 设置值班表 */
 
 .schedule {
     
     box-sizing: border-box;
-    height: 800px;
+    height: 600px;
     width: 100%;
     text-align: center;
-    border-bottom: 10px gray solid; 
-    /* border-left: 5px purple solid;
-    border-right: 5px purple solid;/*
-   
-    /* background-color: aqua; */
+    margin-top: 50px;
+    
 }
 
 .schedule_text{
-    height: 100px;
+    height: 50px;
     text-align: center;
 }
 
 .schedule_text h2 {
     display: inline-block;
-    height: 100px;
+    height: 50px;
     vertical-align: middle;
-    line-height: 100px;
+    line-height: 50px;
+    color: white;
 
 }
+
+
+
 
 
 
@@ -117,43 +215,54 @@
     display: inline-block;
     height: 300px;
     width: 200px;
-    margin-top: 150px;
+    margin-top: 100px;
+    box-shadow:0px 0px 10px 5px rgba(0, 0, 255, 0.351) ;
+    border-radius: 3%;
+    
   }
 
 .day1 {
     
-    background: url(./src/employee.png) no-repeat ;
+    background: url(./src/day1.png) no-repeat ;
+    
+    background-size: 100% 100%;
    
 }
 .day2 {
     
-    background: url(./src/employee.png) no-repeat ;
+    background: url(./src/day2_.png) no-repeat ;
+    background-size: 100% 100%;
    
 }
 .day3 {
     
-    background: url(./src/employee.png) no-repeat ;
-    
+    background: url(./src/day3-\ 副本.png) no-repeat ;
+    background-size: 100% 100%;
+   
 }
 .day4 {
     
-    background: url(./src/employee.png) no-repeat ;
-    
+    background: url(./src/day4\ -\ 副本.png) no-repeat ;
+    background-size: 100% 100%;
+   
 }
 .day5 {
     
-    background: url(./src/employee.png) no-repeat ;
-    
+    background: url(./src/day5.png) no-repeat ;
+    background-size: 100% 100%;
+   
 }
 .day6 {
     
-    background: url(./src/employee.png) no-repeat ;
-    
+    background: url(./src/day6.png) no-repeat ;
+    background-size: 100% 100%;
+   
 }
 .day7 {
     
-    background: url(./src/employee.png) no-repeat ;
-    
+    background: url(./src/day7.png) no-repeat ;
+    background-size: 100% 100%;
+   
 }
  
   .day.active {
@@ -161,11 +270,16 @@
   }
 
 
+
+
+
+
   /* 设定公告区块的样式 */
   .notice_layer {
-    height: 1200px;
+    height: 500px;
     width: 100%;
     text-align: center;
+    color:whitesmoke;
   }
 
   .notice_text {
@@ -207,6 +321,10 @@
   }
 
 
+
+
+
+
  
 /* 轮播图样式 */
 a{
@@ -238,7 +356,7 @@ li{
 .item.active{
 	opacity:1;
 }
-img{
+.item img{
 	width: 100%;
 }
 #btn-left{
